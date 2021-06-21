@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>截图工具</title>
+    <style>
+      body {
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+        background: #eff2f6;
+      }
+      .popup {
+        width: 260px;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px;
+        padding-top: 30px;
+        overflow: hidden;
+      }
+      .popup-cell {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        height: 32px;
+        line-height: 32px;
+      }
+      .popup-cell-title {
+        font-size: 16px;
+        width: 80px;
+      }
+      .popup-cell-info {
+        font-size: 12px;
+        flex: 1;
+      }
+      .popup-cell-info input {
+        height: 32px;
+        line-height: 32px;
+        border: 1px solid #dcdee2;
+        color: #515a6e;
+        cursor: text;
+        -webkit-appearance: none;
+        width: calc(100% - 15px);
+        background: #f5f8fa;
+        outline: none;
+        font-size: 12px;
+        padding-left: 10px;
+        border-radius: 5px;
+      }
+      .popup-cell-button {
+        width: 100%;
+        height: 32px;
+        font-size: 14px;
+        border: 1px solid #0082ff;
+        color: #fff;
+        cursor: pointer;
+        background: #0082ff;
+        border-radius: 5px;
+      }
+      .popup-cell-button:hover {
+        background-color: #5cadff;
+        border-color: #5cadff;
+      }
+      .popup-cancel-btn {
+        color: #515a6e;
+        background: #f7f7f7;
+        border-color: #dcdee2;
+      }
+      .popup-cancel-btn:hover {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="popup">
+      <div class="popup-cell">
+        <div class="popup-cell-title">截屏次数：</div>
+        <div class="popup-cell-info"><input id="popTimeScord" value="1" /></div>
+      </div>
+      <div class="popup-cell">
+        <div class="popup-cell-title">时间间隔：</div>
+        <div class="popup-cell-info">
+          <input id="popTimeInterval" value="1" />
+        </div>
+      </div>
+      <div class="popup-cell" style="margin-top: 20px">
+        <button class="popup-cell-button" id="startCaptureBtn">开始截图</button>
+      </div>
+      <div class="popup-cell">
+        <button class="popup-cell-button popup-cancel-btn" id="closeBtn">
+          取消截图
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="popup.js"></script>
+</html>
