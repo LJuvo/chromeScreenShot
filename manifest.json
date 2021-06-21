@@ -1,6 +1,9 @@
 {
   "name": "截屏工具",
   "version": "1.1",
+  "author": "Juvos",
+  "email": "www.704921698@q.com",
+  "repository": "https://github.com/LJuvo/chromeScreenShot.git",
   "description": "简易截屏、定时截屏工具",
   "background": {
     "scripts": ["background.js"]
